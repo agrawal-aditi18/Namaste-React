@@ -26,15 +26,18 @@
     </script>-->
 
     <!-- Importing React into our project using these cdn links -->
-    <script 
+     
+    <!-- <script 
     crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
     </script> 
-    <!-- above one is the core file of react -->
+     ----above one is the core file of react ------
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
-    </script>
+    </script> 
+    -->
     <!-- this one is a react library react-dom , for doing dom manipulations -->
-
-    <script src="./App.js"></script>
+    
+    <script  type = "module" src="./App.js"></script>
+    <!--Type module becz browser is considering it as a js file which do not contain module so we need to tell that its a module -->
 
 </body>
 </html>
