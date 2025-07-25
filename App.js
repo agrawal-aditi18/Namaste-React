@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-
+/*
 const parent = React.createElement(
   "div",
   { id: "parent" },
@@ -20,6 +20,7 @@ const heading = React.createElement(     //this is REACT-ELEMENT Using CORE REAC
     {id: "heading"},
     "Hello World in React!"
 ); 
+*/
 //console.log(heading) //this heading is a react-element which  is basically a Js object not an h1 tag yet
     // 3 parameters- element(tag), object, childern
     //Objects is the place where you give attributes to the tags
@@ -51,7 +52,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //root.render(jsxHeading); // root.render job is to take this object create the h1 tag which the browser understands and put that inside the root(div) in dom:) ---------Amaaaaaziiiinnnnnnnnng
 
 
-root.render(< HeadingComponent />);
+root.render(< HeadingComponent2 />);
 
 
 
