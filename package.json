@@ -20,7 +20,8 @@
   "homepage": "https://github.com/agrawal-aditi18/Namaste-React#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
   },
   "browserslist": [
     "last 2 versions"
