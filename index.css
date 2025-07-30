@@ -18,13 +18,14 @@
     font-size: 20px;
     display: flex;
     padding: 0px 20px;
+    list-style: none !important;
 }
 
 .nav-items > ul > li {
     padding: 10px;
     margin : 10px;
-    list-style-type: none;
     color : rgb(253, 215, 45);
+    list-style: none !important;
 }
 
 .res-card{
