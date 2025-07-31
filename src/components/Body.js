@@ -35,18 +35,19 @@ if(onlineStatus === false) return <h1>Looks like you are offline. Please Check y
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter">
-        <div className="search">
+    <div className="body ">
+      <div className="filter flex">
+        <div className="search m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setsearchText(e.target.value);
             }}
           />
           <button
+            className="px-4 py-2 bg-pink-300 rounded-md m-4"
             onClick={() => {
               //Filter the resturant cards and Update the UI
               //searchText
@@ -61,19 +62,21 @@ if(onlineStatus === false) return <h1>Looks like you are offline. Please Check y
           </button>
         </div>
 
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.3
-            );
-            setfilteredRestaurants(filteredList);
-          }}
-        >
-          Top Rated Resturants
-        </button>
+        <div className="m-4 p-4 flex items-center">
+          <button
+            className="px-4 py-2 bg-pink-300 rounded-md "
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4.3
+              );
+              setfilteredRestaurants(filteredList);
+            }}
+          >
+            Top Rated Resturants
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {/* //doing a reslist of map for each resturant, we are just redenring ResturantCard */}
         {filteredRestaurants.map((restaurant) => (
           <Link

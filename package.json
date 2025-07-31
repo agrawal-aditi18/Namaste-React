@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/agrawal-aditi18/Namaste-React#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.11.2",
+    "tailwindcss": "^4.1.11"
   },
   "browserslist": [
     "last 2 versions"
