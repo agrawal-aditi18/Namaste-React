@@ -1,18 +1,23 @@
 import {LOGO_URL} from "./utils/constants";
-import { useState, useEffect} from "react";
+import { useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./utils/useOnlineStatus";
+import UserContext from "./utils/UserContext";
 
 const Header = () => {
-const [btnNameReact , setbtnNameReact] = useState("Login");
-const onlineStatus = useOnlineStatus();
-console.log("Header Rendered!")
+  const [btnNameReact, setbtnNameReact] = useState("Login");
+  const onlineStatus = useOnlineStatus();
+  // console.log("Header Rendered!")
 
-useEffect(()=>{
-  console.log("useEffect Called!")
-},[btnNameReact]);
+  const {loggedInUser} = useContext(UserContext); //we can pass as many context we want to make global in our app
+  //u will get the data from the usercontext over in loggedInUser
+  console.log(loggedInUser);
+
+  useEffect(() => {
+    console.log("useEffect Called!");
+  }, [btnNameReact]);
   return (
-    <div className="flex justify-between bg-yellow-100 shadow-lg ">
+    <div className="flex justify-between bg-green-100 shadow-lg ">
       <div className="logo-container">
         <img className="w-35" src={LOGO_URL} />
       </div>
@@ -43,6 +48,8 @@ useEffect(()=>{
           >
             {btnNameReact}
           </button>
+
+          <li className="px-4 font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
